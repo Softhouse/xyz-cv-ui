@@ -25,6 +25,7 @@ module.exports = function(config) {
         'bower_components/toastr/toastr.js',
         'bower_components/moment/moment.js',
         'bower_components/extras.angular.plus/ngplus-overlay.js',
+        'bower_components/angular-resource/angular-resource.js',
 
         './src/app/app.module.js',
         './src/app/**/*.module.js',
