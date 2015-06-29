@@ -16,7 +16,8 @@
     "phantomjs": "~1.9.17",
     "sinon": "~1.15.3",
     "sinon-chai": "~2.8.0",
-    "supertest": "~1.0.1"
+    "supertest": "~1.0.1",
+    "angular-resource": "^1.4.1"
   },
   "devDependencies": {
     "compass": "^0.1.1",
@@ -28,6 +29,7 @@
     "gulp-concat": "^2.2.0",
     "gulp-csslint": "~0.1.4",
     "gulp-embedlr": "~0.5.2",
+    "gulp-flatten": "0.0.4",
     "gulp-header": "^1.0.2",
     "gulp-htmlmin": "~0.1.2",
     "gulp-inject": "^1.0.1",

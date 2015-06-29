@@ -11,6 +11,6 @@
 //     });
 
 //     it("should have a working path", function() {
-//         expect(ROUTER.reouteDefined('/')).to.equal(true);
+//         expect(ROUTER.routeDefined('/')).to.equal(true);
 //     });
 // });
