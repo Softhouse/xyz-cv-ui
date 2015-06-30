@@ -73,6 +73,7 @@
         "$rootScope": false,
         "$route": false,
         "$": false,
-        "ngMidwayTester": false
+        "ngMidwayTester": false,
+        "before": false
     }
 }

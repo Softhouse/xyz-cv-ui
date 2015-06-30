@@ -1,8 +1,8 @@
-describe('xyz-cv-ui.profile', function() {
+describe('xyz-cv-ui.access', function() {
 
     var module;
     before(function() {
-        module = angular.module('xyz-cv-ui.profile');
+        module = angular.module('xyz-cv-ui.access');
     });
 
     it('should be registered', function() {
