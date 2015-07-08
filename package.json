@@ -7,7 +7,9 @@
     "test": "gulp test"
   },
   "dependencies": {
-    "angular-resource": "^1.4.1"
+    "angular-resource": "^1.4.1",
+    "express": "~4.12.4",
+    "gulp-change": "^1.0.0"
   },
   "devDependencies": {
     "compass": "^0.1.1",
@@ -32,6 +34,7 @@
     "gulp-ng-html2js": "~0.1.7",
     "gulp-rename": "^1.2.0",
     "gulp-sass": "~2.0.2",
+    "gulp-replace": "^0.5.3",
     "gulp-serve": "~0.2.0",
     "gulp-uglify": "~0.3.0",
     "gulp-util": "^2.2.14",
