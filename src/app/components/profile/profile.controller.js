@@ -39,7 +39,8 @@
                 sex: '',
                 description: '',
                 personalInterests: '',
-                contactInfo: ''
+                contactInfo: '',
+                updatedAt: ''
             };
 
             /* PRIVATE INFO */
@@ -121,6 +122,7 @@
                     closestSuperior: model.user.closestSuperior,
                     sex: model.user.sex,
                     description: model.user.description,
+                    updatedAt: model.user.updatedAt,
                     personalInterests: model.user.personalInterests.join(', ')
                 };
             }

@@ -339,6 +339,28 @@
         @include border-radius(0);
     }
 
+
+    .sheet-label-date {
+        clear: both;
+        padding-right: 10%;
+        float: right;
+        font-size: 65%;
+        font-weight: normal;
+        height: 20px;
+        line-height: 20px;
+        color: grey;
+        text-align: left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+    }
+
+
+
+
+
+
+
     .sheet-label {
         font-size: 80%;
         font-weight: normal;

@@ -25,6 +25,10 @@
                             <i class="fa fa-user" ng-if="!vm.generalInfo.profileImage"></i>
                         </div>
                         <div class="data-panel">
+                            <div class="sheet-label-date"> Last Update: {{vm.generalInfo.updatedAt | date: 'yyyy-MM-dd'}} </div>
+
+                        
+                        
                             <div class="name">
                                 <span class="flag-icon" ng-class="'flag-icon-' + (vm.generalInfo.country | flag)"></span>
                                 {{ vm.generalInfo.name }}
