@@ -25,6 +25,38 @@
                             <i class="fa fa-user" ng-if="!vm.generalInfo.profileImage"></i>
                         </div>
                         <div class="data-panel">
+                          
+                        
+
+
+                            <div ng-repeat="assignment in vm.assignments | orderBy:'updatedAt':true |limitTo:1">
+                                <div class="sheet-label-date" ng-repeat="skill in vm.skills | orderBy: 'updatedAt':true |limitTo:1" ng-if="skill.updatedAt > assignment.updatedAt && skill.updatedAt > vm.generalInfo.updatedAt">
+                                 Last Update: {{skill.updatedAt | date: 'yyyy-MM-dd HH:mm:ss'}}
+                                </div>
+                                
+                            </div>
+        
+
+
+                            <div ng-repeat="assignment in vm.assignments | orderBy:'updatedAt':true |limitTo:1">
+                                <div class="sheet-label-date" ng-repeat="skill in vm.skills | orderBy: 'updatedAt':true |limitTo:1" ng-if="assignment.updatedAt > skill.updatedAt && assignment.updatedAt > vm.generalInfo.updatedAt">
+                                 Last Update: {{assignment.updatedAt | date: 'yyyy-MM-dd HH:mm:ss'}}
+                                </div>
+                                
+                            </div>
+
+                           <div ng-repeat="assignment in vm.assignments | orderBy:'updatedAt':true |limitTo:1">
+                                <div class="sheet-label-date" ng-repeat="skill in vm.skills | orderBy: 'updatedAt':true |limitTo:1" ng-if="vm.generalInfo.updatedAt > skill.updatedAt && vm.generalInfo.updatedAt > assignment.updatedAt">
+                                 Last Update: {{vm.generalInfo.updatedAt | date: 'yyyy-MM-dd HH:mm:ss'}}
+                                </div>
+                                
+                            </div>
+
+
+
+
+                        
+                        
                             <div class="name">
                                 <span class="flag-icon" ng-class="'flag-icon-' + (vm.generalInfo.country | flag)"></span>
                                 {{ vm.generalInfo.name }}
@@ -42,6 +74,7 @@
                                         -->
                                         {{ vm.generalInfo.office.name }}
                                     </div>
+
                                     <div class="" ng-if="vm.generalInfo.closestSuperior"><i class="fa fa-sitemap"></i> {{ vm.generalInfo.closestSuperior }}</div>
                                 </div>
                             </div>
@@ -56,6 +89,7 @@
                             {{ vm.generalInfo.employeeNumber }}
                         </div>
                     </div>
+
 
                     <div class="row" ng-if="vm.generalInfo.personalInterests" ng-hide="true">
                         <div class="col-sm-4 col-md-3 sheet-label">
@@ -188,7 +222,6 @@
     </div>
 
     <!-- SKILLS -->
-
     <div class="col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 col-sm-12" ng-show="vm.activated">
         <div class="panel-wrapper skills">
             <div class="panel panel-default profile-default">
