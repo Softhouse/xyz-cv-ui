@@ -50,6 +50,12 @@
                 font-weight: bold;
                 flex-basis: 100%;
             }
+            
+            #expertise {
+                color: #FFD700;
+            }
+
+
             .level {
                 width: 70px;
                 flex-basis: 33%;
@@ -61,7 +67,6 @@
                 width: 100px;
                 flex-basis: 33%;
             }
-        }
 
     }
     .pagination-container {
@@ -70,4 +75,5 @@
             margin: 5px;
         }
     }
+}
 }
