@@ -188,6 +188,16 @@
                     display: inline-block;
                     font-weight: bold;
                 }
+
+                #expertise{
+                    color: #FFD700;
+                }
+                
+                #experience{
+                    
+                }
+
+                
                 .level {
                     display: inline-block;
                     /*padding: 0 5px;
@@ -213,6 +223,8 @@
                     display: inline-block;
                 }
             }
+
+
             .endorsements {
                 text-align: right;
                 line-height: 60px;
@@ -372,5 +384,9 @@
                 }
             }
         }
+    }
+
+    .panel-body{
+         color: #999999;
     }
 }
