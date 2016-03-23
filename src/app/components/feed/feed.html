@@ -2,85 +2,10 @@
 	<div class="col-md-12" ng-show="vm.activated">
 	    <div class="panel panel-default profile-default">
 			<div class="news-panel-body">
-				<p>Welcome to <b>KUSH</b> - Softhouse's competence development tool!</p>
-				<p>We're hard at work on version 1.0 which will include export of CVs.</br>
-				Target date: 2016-03-29 </p>
+				<p><b>KUSH</b> has moved!</p>
+				<p>Kush has moved to a new server and domain, this site is therefore deprecated! You will find the new page at the link below!</p>
+                <a href="http://kush.softhouse.se">>>Link to the new server<<<</a>
 			</div>
         </div>
-	</div>
-	<div class="col-md-12" ng-show="vm.activated">
-		<div class="panel">
-			<div class="panel-body">
-				<div class="facts">
-					<div class="fact col-md-6" ng-repeat="chart in vm.charts">
-						<div class="title">
-							{{chart.title}}
-						</div>
-						<div ng-switch="chart.type">
-							<canvas class="chart" tc-chartjs chart-type="line" chart-options="vm.options" chart-data="chart.data" ng-if="vm.loadchart" ng-switch-when="line" auto-legend></canvas>
-							<canvas class="chart" tc-chartjs chart-type="radar" chart-options="vm.options" chart-data="chart.data" ng-if="vm.loadchart" ng-switch-when="radar" auto-legend></canvas>
-							<canvas class="chart" tc-chartjs chart-type="bar" chart-options="vm.options" chart-data="chart.data" ng-if="vm.loadchart" ng-switch-when="bar" auto-legend></canvas>
-							<canvas class="chart" tc-chartjs chart-type="pie" chart-options="vm.pieOptions" chart-data="chart.data" ng-if="vm.loadchart" ng-switch-when="pie" auto-legend></canvas>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="col-md-6 col-lg-6">
-		<div class="panel panel-default">
-            <div class="panel-heading">
-                Recently added skills
-            </div>
-            <div>
-                <div class="skillcard" ng-repeat="skill in vm.latestSkills">
-                    <div class="image-box">
-                        <i class="{{skill.icon}}"></i>
-                    </div>
-                    <div class="data-box">
-                        <div class="name">
-                            {{ skill.name }}
-                        </div>
-                        <div class="date pull-right">
-                            <span am-time-ago="skill.updatedAt"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-		</div>
-	</div>
-	<div class="col-md-6 col-lg-6">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-                Recent profile updates
-            </div>
-            <a class="facecard" ng-repeat="user in vm.latestUsers" ng-href="#/profile/{{ user._id }}">
-				<div class="image-box">
-					<i class="fa fa-user" ng-hide="user.profileImage"></i>
-                	<img ng-if="user.profileImage" ng-src="{{ vm.API_URL }}/file/thumbnail/{{ user.profileImage.generatedName }}">
-				</div>
-				<div class="data-box">
-					<div class="name">
-						{{ user.name }}
-					</div>
-					<div class="office pull-right" ng-if="user.office">
-						{{ user.office.name }}
-					</div>
-					<div class="title">
-						{{ user.position }}
-					</div>
-                    <div ng-if="user.skills.length > 0">
-                        Added&nbsp;<ng-pluralize count="user.skills.length" when="{
-                            '0': 'no skills',
-                            '1': '1 skill',
-                            'other': '{} skills'
-                        }"></ng-pluralize>
-                    </div>
-					<div class="date pull-right">
-						<span am-time-ago="user.updatedAt"></span>
-					</div>
-				</div>
-			</a>
-		</div>
 	</div>
 </div>
