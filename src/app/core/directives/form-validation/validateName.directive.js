@@ -17,7 +17,7 @@
         //////////////
 
         function link (scope, elem, attr, ngModel) {
-            var regex = /^[A-Z åäöÅÄÖ]{1,50}$/i;
+            var regex = /^.{0,100}$/i;
             ngModel.$parsers.unshift(function(value) {
                 ngModel.$setValidity('validatename', regex.test(value));
                 return value;
